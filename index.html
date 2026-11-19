@@ -1,14 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Redirecting...</title>
+  <meta name="robots" content="noindex,nofollow">
+  <title>Telegram</title>
   <script>
-    window.location.replace("https://t.me/Leodragvippbot");
+    (function () {
+      var br = "https://t.me/leodragnbot";
+      var gringo = "https://t.me/Leodragvippbot";
+      var idioma = (
+        navigator.language ||
+        (navigator.languages && navigator.languages[0]) ||
+        ""
+      ).toLowerCase();
+
+      var destino = /^pt(?:[-_]|$)/.test(idioma) ? br : gringo;
+
+      window.location.replace(destino);
+    })();
   </script>
 </head>
 <body>
-  <a href="https://t.me/Leodragvippbot">Open Telegram</a>
+  <p>Se não abrir automaticamente / If it doesn't open automatically:</p>
+  <p><a href="https://t.me/leodragnbot">🇧🇷 Telegram — Português</a></p>
+  <p><a href="https://t.me/Leodragvippbot">🌎 Telegram — English</a></p>
 </body>
 </html>
